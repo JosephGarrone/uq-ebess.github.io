@@ -1,0 +1,24 @@
+{
+  "name": "uq-ebess.github.io",
+  "version": "1.0.0",
+  "description": "The UQ EBESS Website",
+  "main": "echo \"Error: not a runnable project\" && exit 1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uq-ebess/uq-ebess.github.io.git"
+  },
+  "author": "Joseph J Garrone <josephgarrone+npm@gmail.com> (https://www.illogicalbit.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uq-ebess/uq-ebess.github.io/issues"
+  },
+  "homepage": "https://github.com/uq-ebess/uq-ebess.github.io#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nunjucks": "^3.0.0",
+    "nunjucks": "^3.0.0"
+  }
+}
