@@ -8,6 +8,6 @@ To develop this website you will need `node` and `npm` to run the build tools.
 
 Run `npm install` to install all dependencies.
 
-Run `gulp compile` to build the website. See `dist` for the output.
+Run `gulp compile` to build the website. See `docs` for the output.
 
 This project will work best in Visual Studio Code.

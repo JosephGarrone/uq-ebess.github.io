@@ -6,16 +6,16 @@ const sass = require('gulp-sass');
 gulp.task('compile', ['bootstrap'], () => {
     gulp.src(['src/templates/**/*.html', '!src/templates/**/_*.js'])
         .pipe(nunjucks.compile({}, {}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('docs'));
     gulp.src('src/js/', { base: '.' })
-        .pipe(gulp.dest('dist/lib/js/'));
+        .pipe(gulp.dest('docs/lib/js/'));
     gulp.src('src/css/', { base: '.' })
-        .pipe(gulp.dest('dist/lib/css/'));
+        .pipe(gulp.dest('docs/lib/css/'));
 });
 
 gulp.task('bootstrap', () => {
     gulp.src('node_modules/bootstrap/scss/bootstrap.scss')
         .pipe(customizeBootstrap('src/css/bootstrap-custom/*.scss'))
         .pipe(sass())
-        .pipe(gulp.dest('dist/lib/css/bootstrap/'))
+        .pipe(gulp.dest('docs/lib/css/bootstrap/'))
 })
