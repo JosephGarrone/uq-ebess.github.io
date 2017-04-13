@@ -22,27 +22,50 @@
 
         <!-- Boostrap -->
         <link rel="stylesheet" href="{% if active_page != 'home' %}../{% endif %}lib/css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="{% if active_page != 'home' %}../{% endif %}lib/css/main.css">
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     </head>
-    <body>
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="{% if active_page != 'home' %}../{% endif %}.">
-            <img src="{% if active_page != 'home' %}../{% endif %}img/logo.png"/>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                {% for item in nav_items %}
-                <li class="nav-item {% if item.id == active_page %} active {% endif %}">
-                    <a class="nav-link" href="{% if active_page != 'home' %}../{% endif %}{{ item.href }}">{{ item.caption }}</a>
-                </li>
-                {% endfor %}
-            </ul>
+    <body class="bg-primary">
+        <canvas id="background-canvas">
+        </canvas>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse justify-content-center sticky-top">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="{% if active_page != 'home' %}../{% endif %}.">
+                <img class="logo" src="{% if active_page != 'home' %}../{% endif %}img/logo.png"/>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    {% for item in nav_items %}
+                    <li class="nav-item {% if item.id == active_page %} active {% endif %}">
+                        <a class="nav-link" href="{% if active_page != 'home' %}../{% endif %}{{ item.href }}">{{ item.caption }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Body content here -->
+        <div class="container main-container">
+            {% block content %}
+            {% endblock %}
         </div>
-    </nav>
+
+        <!-- Footer -->
+        <div class="container footer">
+            <div class="row">
+                <div class="col">
+                    © 2017 Electrically Based Engineering Student Society
+                </div>
+                <div class="col text-right">
+                    Design by <a href="https://www.illogicalbit.com">Joseph Garrone</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

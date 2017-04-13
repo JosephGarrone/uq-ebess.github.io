@@ -1,0 +1,50 @@
+/* Logo Image */
+.logo {
+    height: 50px;
+}
+
+/* Background canvas styling */
+#background-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+/* Nav bar centering */
+.navbar-collapse {
+    width: auto !important;
+}
+
+/* Main container styling */
+.main-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Footer container styling */
+.container.footer {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    font-size: 0.8rem;
+}
+
+/* Article card styling */
+.main-container .card:first-child {
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+.main-container .card:last-child {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.main-container .card {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card-subtitle {
+    margin-bottom: 1rem !important;
+}
+

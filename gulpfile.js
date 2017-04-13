@@ -7,9 +7,9 @@ gulp.task('compile', ['bootstrap'], () => {
     gulp.src(['src/templates/**/*.html', '!src/templates/**/_*.js'])
         .pipe(nunjucks.compile({}, {}))
         .pipe(gulp.dest('docs'));
-    gulp.src('src/js/', { base: '.' })
+    gulp.src('src/js/**/*.js')
         .pipe(gulp.dest('docs/lib/js/'));
-    gulp.src('src/css/', { base: '.' })
+    gulp.src('src/css/**/*.css')
         .pipe(gulp.dest('docs/lib/css/'));
 });
 

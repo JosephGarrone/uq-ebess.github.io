@@ -1,7 +1,21 @@
 @import "../../../node_modules/bootstrap/scss/_variables.scss";
+@import "../../../node_modules/bootstrap/scss/mixins/_background-variant.scss";
+@import "../../../node_modules/bootstrap/scss/mixins/_hover.scss";
 
-$brand-primary:         #007DCC;
-$brand-success:         #3D990F;
-$brand-info:            #80BEE6;
-$brand-warning:         #FE8421;
-$brand-danger:          #B00;
+$brand-primary:                 #FFFFFF;
+$brand-success:                 #3D990F;
+$brand-info:                    #80BEE6;
+$brand-warning:                 #FE8421;
+$brand-danger:                  #B00;
+$brand-inverse:                 #000000;
+$brand-highlight-1:             #FA9B02;
+$brand-highlight-2:             #FFC30F;
+$navbar-inverse-hover-color:    $brand-highlight-1;
+$navbar-inverse-active-color:   $brand-highlight-2;
+$navbar-inverse-color:          rgba(255, 255, 255, 0.85);
+
+/* Card theming */
+$card-border-radius:            0px;
+
+@include bg-variant('.bg-highlight-1', $brand-highlight-1);
+@include bg-variant('.bg-highlight-2', $brand-highlight-2);

@@ -4,7 +4,8 @@
   "description": "The UQ EBESS Website",
   "main": "echo \"Error: not a runnable project\" && exit 1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "ws -d docs"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
     "gulp-nunjucks": "^3.0.0",
     "gulp-sass": "^3.1.0",
     "nunjucks": "^3.0.0"
+  },
+  "devDependencies": {
+    "local-web-server": "^1.2.7"
   }
 }
