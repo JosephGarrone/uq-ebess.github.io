@@ -1,6 +1,6 @@
 # uq-ebess.github.io
 
-Future UQ EBESS Website, to replace that currently at www.uqebess.com. Can be viewed at [https://uq-ebess.github.io/uq-ebess.github.io/](https://uq-ebess.github.io/uq-ebess.github.io/).
+Future UQ EBESS Website, to replace that currently at www.uqebess.com. Can be viewed at [https://uq-ebess.github.io/uq-ebess.github.io/](https://uq-ebess.github.io/uq-ebess.github.io/docs).
 
 # Development
 
