@@ -21,13 +21,13 @@
 /* Main container styling */
 .main-container {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 /* Footer container styling */
 .container.footer {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
     font-size: 0.8rem;
 }
 
@@ -48,3 +48,6 @@
     margin-bottom: 1rem !important;
 }
 
+body.bg-primary {
+    background: #F7F7F7 !important;
+}
