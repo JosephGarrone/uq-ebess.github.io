@@ -4,6 +4,12 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<!-- Banner -->
+<div class="text-center banner">
+    <img src="{% if active_page != 'home' %}../{% endif %}img/banner.png"></img>
+</div>
+
+<!-- Main content -->
 <div class="card">
   <div class="card-block">
     <h4 class="card-title">Welcome to EBESS 2017</h4>
