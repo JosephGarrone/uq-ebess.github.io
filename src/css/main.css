@@ -34,15 +34,16 @@
 /* Article card styling */
 .main-container .card:first-child {
     margin-top: 0px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 .main-container .card:last-child {
-    margin-top: 5px;
+    margin-top: 8px;
     margin-bottom: 0px;
 }
 .main-container .card {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-shadow: 0px 0px 10px #888888;
 }
 .card-subtitle {
     margin-bottom: 1rem !important;

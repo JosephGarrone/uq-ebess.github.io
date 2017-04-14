@@ -16,6 +16,7 @@
         <script src="../lib/js/Main.js"></script>
     </head>
     <body class="bg-primary">
+        <!-- Dynamic Background Canvas-->
         <canvas id="background-canvas">
         </canvas>
 
@@ -77,7 +78,30 @@
         <!-- Body content here -->
         <div class="container main-container">
             
-            
+<!-- Facebook SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Events</h4>
+    <div class="card-text text-center">
+        <div class="fb-page" data-href="https://www.facebook.com/uqebess/" data-tabs="events" data-small-header="true" 
+                data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-width="800">
+            <blockquote cite="https://www.facebook.com/uqebess/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/uqebess/">EBESS UQ</a>
+            </blockquote>
+        </div>
+    </div>
+  </div>
+</div>
+
         </div>
 
         <!-- Footer -->

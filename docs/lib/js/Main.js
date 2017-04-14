@@ -1,16 +1,21 @@
 $(document).ready(function() {
     DrawCanvas();
 
+    window.addEventListener("resize", DrawCanvas, false);
     window.requestAnimationFrame(AnimateCanvas);
 })
 
 
 var goodRatio = 0.5;
 var initialRatio = 0.1;
+var maxNeighbours = 3;
 
 var circleStrokeWidth = 2;
 var circleRadius = 3;
 var lineStrokeWidth = 3;
+
+var nodeColour = "#FA9B02";
+var lineColour = "#FFC30F";
 
 var spacingX = 50;
 var spacingY = 50;
@@ -44,7 +49,7 @@ Point.prototype.isChosen = function() {
 Point.prototype.draw = function() {
     this.ctx.beginPath();
     this.ctx.arc(this.x, this.y, circleRadius, 0, 2 * Math.PI);
-    this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.3)';
+    this.ctx.strokeStyle = nodeColour;
     this.ctx.lineWidth = circleStrokeWidth;
     this.ctx.stroke();
     this.ctx.closePath();
@@ -97,7 +102,7 @@ Point.prototype.drawConnection = function(other) {
     this.ctx.beginPath();
     this.ctx.moveTo(x1, y1);
     this.ctx.lineTo(x2, y2);
-    this.ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)';
+    this.ctx.strokeStyle = lineColour;
     this.ctx.lineWidth = lineStrokeWidth;
     this.ctx.stroke();
     this.ctx.closePath();
@@ -138,7 +143,7 @@ Point.prototype.chooseNeighbour = function() {
         for (var j = startY; j <= endY; j++) {
             var point = grid[i][j];
 
-            if (point != null && !point.isChosen()) {
+            if (point != null && !point.isChosen() && point.neighbourCount() < maxNeighbours) {
                 points.push(point);
             }
         }
@@ -147,6 +152,7 @@ Point.prototype.chooseNeighbour = function() {
     if (points.length > 0) {
         var chosenPoint = points[Math.floor(Math.random() * points.length)];
         chosenPoint.choose();
+    } else {
     }
 }
 
@@ -183,6 +189,10 @@ Point.prototype.neighbourCount = function() {
 
     for (var i = startX; i <= endX; i++) {
         for (var j = startY; j <= endY; j++) {
+            if (i >= grid.length || j >= grid[i].length) {
+                continue;
+            }
+
             var point = grid[i][j];
 
             if (point != null && point.isChosen()) {
@@ -272,8 +282,6 @@ function DrawCanvas() {
     var startX = ctx.canvas.width / 2;
     var startY = ctx.canvas.height / 2;
 
-    console.log(ctx, startX, startY);
-
     var xLength = Math.ceil(ctx.canvas.width / 50) + 1;
     var yLength = Math.ceil(ctx.canvas.height / 50) + 1;
 
@@ -283,22 +291,28 @@ function DrawCanvas() {
         for (var j = 0; j < yLength; j++) {
             grid[i][j] = new Point(ctx, i, j);
             
-            if (getRandomBoolean()) {
+            if (getRandomBoolean() && grid[i][j].neighbourCount() < maxNeighbours) {
                 grid[i][j].choose();
             }
         }
     }
 
+    // Populate more points
+    var count = 0;
     while (getTotalChosen() / (grid.length * grid[0].length) < goodRatio) {
+        if (count++ > 2000) {
+            break;
+        }
         for (var i = 0; i < grid.length; i++) {
             for (var j = 0; j < grid[j].length; j++) {
-                if (grid[i][j].neighbourCount() < 3) {
+                if (grid[i][j].neighbourCount() < maxNeighbours) {
                     grid[i][j].chooseNeighbour();
                 }
             }
         }
     }
 
+    // Draw all the nodes
     for (var i = 0; i < xLength; i++) {
         for (var j = 0; j < yLength; j++) {
             if (grid[i][j].isChosen()) {
@@ -307,6 +321,7 @@ function DrawCanvas() {
         }
     }
 
+    // Connect them
     for (var i = 0; i < xLength; i++) {
         for (var j = 0; j < yLength; j++) {
             if (grid[i][j].isChosen()) {
@@ -318,5 +333,4 @@ function DrawCanvas() {
 
 function AnimateCanvas() {
     var ctx = document.getElementById("background-canvas").getContext("2d");
-
 }
