@@ -52,3 +52,30 @@
 body.bg-primary {
     background: #F7F7F7 !important;
 }
+
+/* Executive list styling */
+.executive-image {
+    width: 100%;
+    max-width: 240px;
+    padding: 5px;
+}
+
+.executive-title h5 {
+    display: inline-block;
+}
+
+.executive-title h6 {
+    display: inline-block;
+}
+
+.executive-container > .row:first-child {
+    margin-top: 0px;
+}
+
+.executive-container > .row {
+    margin-top: 10px;
+}
+
+.executive-container > .row > div:nth-child(2) {
+    padding: 5px;
+}

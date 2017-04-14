@@ -13,9 +13,11 @@ $brand-highlight-2:             #FFC30F;
 $navbar-inverse-hover-color:    $brand-highlight-1;
 $navbar-inverse-active-color:   $brand-highlight-2;
 $navbar-inverse-color:          rgba(255, 255, 255, 0.85);
+$brand-inverse-80:              rgba(0, 0, 0, 0.8);
 
 /* Card theming */
 $card-border-radius:            0px;
 
 @include bg-variant('.bg-highlight-1', $brand-highlight-1);
 @include bg-variant('.bg-highlight-2', $brand-highlight-2);
+@include bg-variant('.bg-inverse-80', $brand-inverse-80);

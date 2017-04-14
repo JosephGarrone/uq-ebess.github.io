@@ -11,6 +11,12 @@ a.bg-highlight-1:focus, a.bg-highlight-1:hover {
 a.bg-highlight-2:focus, a.bg-highlight-2:hover {
   background-color: #dba400 !important; }
 
+.bg-inverse-80 {
+  background-color: rgba(0, 0, 0, 0.8) !important; }
+
+a.bg-inverse-80:focus, a.bg-inverse-80:hover {
+  background-color: rgba(0, 0, 0, 0.8) !important; }
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
