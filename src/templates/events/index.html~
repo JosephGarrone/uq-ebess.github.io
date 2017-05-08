@@ -16,7 +16,7 @@ fjs.parentNode.insertBefore(js, fjs);
 
 <div class="card">
   <div class="card-block">
-    <h4 class="card-title">Upcoming Events</h4>
+    <h4 class="card-title">Events</h4>
     <div class="card-text text-center">
         <div class="fb-page" data-href="https://www.facebook.com/uqebess/" data-tabs="events" data-small-header="true" 
                 data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true" data-width="800">
@@ -24,15 +24,6 @@ fjs.parentNode.insertBefore(js, fjs);
                 <a href="https://www.facebook.com/uqebess/">EBESS UQ</a>
             </blockquote>
         </div>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="card-block">
-    <h4 class="card-title">Event Calender</h4>
-    <div class="card-text text-center">
-        <img src="../img/all-events.png" style="width:50%"></img>
     </div>
   </div>
 </div>

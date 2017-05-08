@@ -1,0 +1,16 @@
+{% extends "_default.html" %}
+{% set active_page = "merchandise" %}
+
+{% block title %}Merchandise{% endblock %}
+
+{% block content %}
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title">Merchandise</h4>
+    <p class="card-text gallery" id="gallery">
+        <script type='text/javascript' src='https://www.etsy.com/assets/js/etsy_mini_shop.js'></script>
+        <script type='text/javascript'>new Etsy.Mini(14573288,'gallery',5,5,0,'https://www.etsy.com');</script>
+    </p>
+  </div>
+</div>
+{% endblock %}
