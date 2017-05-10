@@ -10,7 +10,81 @@
     <p class="card-text">
         Check out our sweet EBESS merch!
     </p>
-    <h5 class="card-title">Shirt and Jumpers</h5>  
+    <h5 class="card-title">New and Improved Winter Merch</h5>
+
+        <p class="card-text">To kick off the winter season we're offering preorders for some classic hoodie designs, 
+            a stylish new crew neck jumper, and our highly demanded bucket hats!</p>
+        <p class="card-text"></p>
+
+        <div id="winterCarousel" class="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li class="winter1 active"></li>
+            <li class="winter2"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+
+            <div class="carousel-item active" style="max-width:100%;height:345px;">
+                <img src="../img/winter-mock.png" height="100%" style="margin-left:auto;margin-right:auto;">
+                <div class="carousel-caption">
+                <h3>$40</h3>
+                <p>Hoodie & Crew Neck Jumper</p>
+                </div>
+            </div>
+                
+            <div class="carousel-item" style="max-width:100%;height:345px;">
+                <img src="../img/bucket-hat.png" height="100%" style="margin-left:auto;margin-right:auto;">
+                <div class="carousel-caption">
+                <h3>$15</h3>
+                <p>Bucket Hat</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="carousel-item-prev" href="#miscCarousel" role="button">
+            <span class="carousel-item-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-item-next" href="#miscCarousel" role="button">
+            <span class="carousel-item-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+        <script>
+        $(document).ready(function(){
+            // Activate Carousel
+            $("#winterCarousel").carousel();
+            
+            // Enable Carousel Indicators
+            $(".winter1").click(function(){
+                $("#winterCarousel").carousel(0);
+            });
+            $(".winter2").click(function(){
+                $("#winterCarousel").carousel(1);
+            });
+            
+            
+            // Enable Carousel Controls
+            $(".left").click(function(){
+                $("#winterCarousel").carousel("prev");
+            });
+            $(".right").click(function(){
+                $("#winterCarousel").carousel("next");
+            });
+        });
+        </script>
+    
+    <p class="card-text"></p>
+    <p class="card-text">Order a Hoodie or Jumper <a href="https://www.tilt.com/tilts/ebess-merch-sale">here</a> 
+    and a Bucket Hat <a href="https://www.tilt.com/tilts/ebess-bucket-hat-sale">here.</a></p>
+    
+    <p class="card-text"></p>
+
+    <h5 class="card-title">T-Shirts</h5>  
       <div id="shirtsCarousel" class="carousel">
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -23,8 +97,6 @@
             <li class="shirt7"></li>
             <li class="shirt8"></li>
             <li class="shirt9"></li>
-            <li class="hood1"></li>
-            <li class="hood2"></li>
             </ol>
 
             <!-- Wrapper for slides -->
@@ -101,22 +173,6 @@
                 <p>Resistance Training T-Shirt</p>
                 </div>   
             </div>
-
-            <div class="carousel-item" style="max-width:100%;height:345px;">
-                <img src="../img/hood1.png" height="100%" style="margin-left:auto;margin-right:auto;">
-                <div class="carousel-caption">
-                <h3>$40</h3>
-                <p>Blue EBESS Hoodie</p>
-                </div>   
-            </div>
-
-            <div class="carousel-item" style="max-width:100%;height:345px;">
-                <img src="../img/hood2.png" height="100%" style="margin-left:auto;margin-right:auto;">
-                <div class="carousel-caption">
-                <h3>$40</h3>
-                <p>Black and Red EBESS Hoodie</p>
-                </div>   
-            </div>
           </div>
 
             <!-- Left and right controls -->
@@ -163,12 +219,6 @@
             $(".shirt9").click(function(){
                 $("#shirtsCarousel").carousel(8);
             });
-            $(".hood1").click(function(){
-                $("#shirtsCarousel").carousel(9);
-            });
-            $(".hood2").click(function(){
-                $("#shirtsCarousel").carousel(10);
-            });
             
             // Enable Carousel Controls
             $(".left").click(function(){
@@ -187,21 +237,12 @@
             <ol class="carousel-indicators">
             <li class="misc1 active"></li>
             <li class="misc2"></li>
-            <li class="misc3"></li>
             </ol>
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
 
             <div class="carousel-item active" style="max-width:100%;height:345px;">
-                <img src="../img/bucket-hat.png" height="100%" style="margin-left:auto;margin-right:auto;">
-                <div class="carousel-caption">
-                <h3>$15</h3>
-                <p>EBESS White Bucket Hat</p>
-                </div>
-            </div>
-
-            <div class="carousel-item" style="max-width:100%;height:345px;">
                 <img src="../img/pcb-ruler.png" height="100%" style="margin-left:auto;margin-right:auto;">
                 <div class="carousel-caption">
                 <h3>$5</h3>
@@ -240,9 +281,6 @@
             });
             $(".misc2").click(function(){
                 $("#miscCarousel").carousel(1);
-            });
-            $(".misc3").click(function(){
-                $("#miscCarousel").carousel(2);
             });
             
             
@@ -303,7 +341,7 @@
             
             // Enable Carousel Indicators
             $(".kit1").click(function(){
-                $("#shirtsCarousel").carousel(0);
+                $("#kitsCarousel").carousel(0);
             });
             $(".kit2").click(function(){
                 $("#kitsCarousel").carousel(1);
