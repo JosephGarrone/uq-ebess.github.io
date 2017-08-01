@@ -36,7 +36,7 @@ module.exports = {
     // Iterate through manifest files
     return content.map(function(filename) {
       // Check if overrides matches manifest file
-      var prefix = _.includes(config.overrideFiles, filename) ? overridePrefix : './';
+      var prefix = _.contains(config.overrideFiles, filename) ? overridePrefix : './';
       var value =  '@import "' + path.join(prefix, filename) + '";';
       while (value.indexOf("\\") >= 0) {
         value = value.replace("\\", "/");
