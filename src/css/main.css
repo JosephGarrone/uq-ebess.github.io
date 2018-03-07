@@ -28,6 +28,9 @@
 
 .sponsor-row > div {
     white-space: nowrap;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Background canvas styling */
